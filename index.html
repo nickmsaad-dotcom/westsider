@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Westsider — Your insider guide to the best things to do in West Los Angeles: Santa Monica, Brentwood, Sawtelle, and beyond.">
+  <meta property="og:title" content="Westsider — Discover the Best of West LA">
+  <meta property="og:description" content="New restaurants, hidden parks, bike paths, and local secrets in Santa Monica, Brentwood, and Sawtelle.">
+  <title>Westsider — Discover the Best of West LA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
+
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#featured">Featured</a>
+        <a href="#posts">Explore</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="post.html">Read</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav__hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
+      <nav class="nav__mobile-links" aria-label="Mobile navigation">
+        <a href="#featured">Featured</a>
+        <a href="#posts">Explore</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="post.html">Read</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO — Santa Monica Pier at golden hour -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg" role="img" aria-label="Santa Monica Pier at golden hour with Pacific Ocean in the background" style="background-image: url('https://images.unsplash.com/photo-1749230538305-cba01a128532?w=1800&q=85&auto=format&fit=crop');"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <span class="tag reveal">Santa Monica &bull; Brentwood &bull; Sawtelle</span>
+        <h1 class="hero__headline reveal" id="hero-heading">
+          Your guide<br>to the best<br>of West LA
+        </h1>
+        <p class="hero__subtext reveal">
+          New restaurants, hidden parks, local rituals, and the spots
+          worth getting off the couch for &mdash; all within a few miles of home.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#posts" class="btn btn--primary">Start Exploring</a>
+          <a href="#newsletter" class="btn btn--ghost">Get the Newsletter</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-cue" aria-hidden="true">&#8964;</div>
+    </section>
+
+    <!-- FEATURED POST — Sawtelle Blvd -->
+    <section class="section featured" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <span class="section__eyebrow reveal">Featured</span>
+        <h2 class="section__heading reveal" id="featured-heading">This Week&rsquo;s Pick</h2>
+
+        <article class="featured__card reveal">
+          <div class="featured__image">
+            <img
+              src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=900&q=80&auto=format&fit=crop"
+              alt="Rich tonkotsu ramen with chashu pork and soft-boiled egg at Tsujita LA on Sawtelle"
+              loading="eager"
+            >
+            <span class="tag tag--dining">Dining</span>
+          </div>
+          <div class="featured__body">
+            <h3>Sawtelle Blvd: West LA&rsquo;s Japanese Food Street You&rsquo;ve Been Sleeping On</h3>
+            <p class="excerpt">
+              Between Olympic and Pico Blvds, Sawtelle Boulevard packs more great Japanese
+              food per block than anywhere outside Tokyo. Tsujita&rsquo;s tsukemen line starts before
+              11am. Menya Tigre&rsquo;s broth is borderline medicinal. And Marugame Udon is
+              the best $10 lunch in the city. Here&rsquo;s how to eat your way down the street.
+            </p>
+            <div class="meta">
+              <span class="read-time">7 min read</span>
+              <a href="post.html" class="btn btn--text">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- POSTS GRID -->
+    <section class="section posts-section" id="posts" aria-labelledby="posts-heading">
+      <div class="container">
+        <span class="section__eyebrow reveal">Explore</span>
+        <h2 class="section__heading reveal" id="posts-heading">Find Your Next Adventure</h2>
+
+        <div class="filter-tabs" role="tablist" aria-label="Filter posts by category">
+          <button class="filter-tab active" data-filter="all"         role="tab" aria-selected="true">All</button>
+          <button class="filter-tab"        data-filter="dining"      role="tab" aria-selected="false">Dining</button>
+          <button class="filter-tab"        data-filter="outdoors"    role="tab" aria-selected="false">Outdoors</button>
+          <button class="filter-tab"        data-filter="nightlife"   role="tab" aria-selected="false">Nightlife</button>
+          <button class="filter-tab"        data-filter="arts"        role="tab" aria-selected="false">Arts</button>
+          <button class="filter-tab"        data-filter="beaches"     role="tab" aria-selected="false">Beaches</button>
+          <button class="filter-tab"        data-filter="hidden-gems" role="tab" aria-selected="false">Hidden Gems</button>
+        </div>
+
+        <div class="grid" id="postsGrid">
+
+          <!-- 1 — Sawtelle / Dining -->
+          <article class="card reveal" data-category="dining">
+            <a href="post.html" aria-label="Read: Sawtelle Blvd Japanese food guide" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=600&q=80&auto=format&fit=crop"
+                  alt="Steaming bowl of Japanese ramen with noodles, chashu pork, and nori"
+                  loading="lazy"
+                >
+                <span class="tag tag--dining">Dining</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Sawtelle Blvd: The Best Japanese Restaurants Right Now</h3>
+              <p class="card__excerpt">Tsujita&rsquo;s tsukemen, Menya Tigre&rsquo;s velvety broth, Marugame Udon&rsquo;s $10 lunch — your complete guide to Little Osaka in West LA.</p>
+              <div class="card__meta">
+                <span class="read-time">7 min read</span>
+                <a href="post.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 — Palisades Park / Outdoors -->
+          <article class="card reveal" data-category="outdoors">
+            <a href="post-palisades-park.html" aria-label="Read: Palisades Park guide" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1568418268013-a51b38f236c2?w=600&q=80&auto=format&fit=crop"
+                  alt="Golden sunset over the Pacific Ocean viewed from a clifftop park with palm trees"
+                  loading="lazy"
+                >
+                <span class="tag tag--outdoors">Outdoors</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Palisades Park at Sunset: The Free Show That Beats Any Bar</h3>
+              <p class="card__excerpt">26 acres of blufftop parkland along Ocean Avenue, the 1889 Camera Obscura, a rose garden, and nightly sunsets over Santa Monica Bay that still stop people mid-sentence.</p>
+              <div class="card__meta">
+                <span class="read-time">4 min read</span>
+                <a href="post-palisades-park.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 — Brentwood Country Mart / Hidden Gems -->
+          <article class="card reveal" data-category="hidden-gems">
+            <a href="post-brentwood-mart.html" aria-label="Read: Brentwood Country Mart guide" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1633583960343-e258fb899aef?w=600&q=80&auto=format&fit=crop"
+                  alt="Charming outdoor courtyard restaurant with string lights and casual seating"
+                  loading="lazy"
+                >
+                <span class="tag tag--hidden-gems">Hidden Gems</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Brentwood Country Mart: Brunch, Boutiques, and Sunday Ritual</h3>
+              <p class="card__excerpt">Farmshop&rsquo;s California brunch, Reddi Chick rotisserie, an artisanal Sunday farmers market, and the low-key courtyard energy that Brentwood does better than anyone.</p>
+              <div class="card__meta">
+                <span class="read-time">5 min read</span>
+                <a href="post-brentwood-mart.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 — Santa Monica Farmer's Market / Dining -->
+          <article class="card reveal" data-category="dining">
+            <a href="post-farmers-market.html" aria-label="Read: Santa Monica Farmer's Market guide" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1569254631271-fb470f53fa85?w=600&q=80&auto=format&fit=crop"
+                  alt="Bright colorful vegetables and fruit at an outdoor farmer's market"
+                  loading="lazy"
+                >
+                <span class="tag tag--dining">Dining</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Santa Monica Farmer&rsquo;s Market: Why Wednesday Wins</h3>
+              <p class="card__excerpt">75 farmers, the best chefs in LA all shopping before you, and stone fruit so ripe it doesn&rsquo;t survive the drive home. Arizona Ave &amp; 2nd St, 8am–1pm, rain or shine.</p>
+              <div class="card__meta">
+                <span class="read-time">5 min read</span>
+                <a href="post-farmers-market.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 — Tongva Park / Outdoors -->
+          <article class="card reveal" data-category="outdoors">
+            <a href="post-tongva-park.html" aria-label="Read: Tongva Park guide" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1767681774612-a3062667f6ac?w=600&q=80&auto=format&fit=crop"
+                  alt="Modern urban park with lush greenery and city skyline in the background"
+                  loading="lazy"
+                >
+                <span class="tag tag--outdoors">Outdoors</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Tongva Park: Santa Monica&rsquo;s Most Underrated Six Acres</h3>
+              <p class="card__excerpt">Free concerts at the Gathering Hill amphitheater, 170+ plant species, a splash pad for kids, and ocean panoramas from Observation Hill — one block from the Pier.</p>
+              <div class="card__meta">
+                <span class="read-time">4 min read</span>
+                <a href="post-tongva-park.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 — Hammer Museum / Arts -->
+          <article class="card reveal" data-category="arts">
+            <a href="post-hammer-museum.html" aria-label="Read: Hammer Museum guide" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&q=80&auto=format&fit=crop"
+                  alt="Bright contemporary art gallery interior with white walls and natural lighting"
+                  loading="lazy"
+                >
+                <span class="tag tag--arts">Arts</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">The Hammer Museum: World-Class Art, Always Free</h3>
+              <p class="card__excerpt">UCLA&rsquo;s Hammer Museum on Wilshire is one of LA&rsquo;s best contemporary art spaces. Free admission every day, a legendary bookstore, free film screenings, and an open-air courtyard restaurant.</p>
+              <div class="card__meta">
+                <span class="read-time">4 min read</span>
+                <a href="post-hammer-museum.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 — Ballona Creek Bike Path / Outdoors -->
+          <article class="card reveal" data-category="outdoors">
+            <a href="post-ballona-creek.html" aria-label="Read: Ballona Creek Bike Path guide" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1590622055142-4313e2f6935c?w=600&q=80&auto=format&fit=crop"
+                  alt="Cyclist on a paved bike path alongside a creek on a sunny Los Angeles day"
+                  loading="lazy"
+                >
+                <span class="tag tag--outdoors">Outdoors</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Ballona Creek Bike Path: West LA&rsquo;s Secret 7-Mile Escape</h3>
+              <p class="card__excerpt">A flat, car-free Class I path from Culver City through West LA, past Sawtelle, all the way to the beach at Marina del Rey. The best way to spend a Sunday morning without leaving the Westside.</p>
+              <div class="card__meta">
+                <span class="read-time">5 min read</span>
+                <a href="post-ballona-creek.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8 — SELINE / Dining -->
+          <article class="card reveal" data-category="dining">
+            <a href="post-seline.html" aria-label="Read: SELINE restaurant review" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop"
+                  alt="Elegant plated fine dining dish with precise garnish and sauces"
+                  loading="lazy"
+                >
+                <span class="tag tag--dining">Dining</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">SELINE: Santa Monica&rsquo;s New Michelin-Worthy Tasting Menu</h3>
+              <p class="card__excerpt">Chef Dave Beran&rsquo;s 15-to-18-course menu on Main Street just landed on the 2025 Michelin Guide. Southern California ingredients, no predictable plays. Book weeks ahead.</p>
+              <div class="card__meta">
+                <span class="read-time">6 min read</span>
+                <a href="post-seline.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9 — Cosetta / Dining -->
+          <article class="card reveal" data-category="dining">
+            <a href="post-cosetta.html" aria-label="Read: Cosetta restaurant review" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&auto=format&fit=crop"
+                  alt="Wood-fired Neapolitan pizza with a puffy char-blistered crust fresh from the oven"
+                  loading="lazy"
+                >
+                <span class="tag tag--dining">Dining</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Cosetta Is the California-Italian Spot Ocean Park Needed</h3>
+              <p class="card__excerpt">Chef Zach Pollack&rsquo;s Ocean Park newcomer does puffy-crusted pizzas, small plates, house-baked bread, and a sprawling alfresco patio that makes every dinner feel like summer.</p>
+              <div class="card__meta">
+                <span class="read-time">5 min read</span>
+                <a href="post-cosetta.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 — Nightlife / Rooftop -->
+          <article class="card reveal" data-category="nightlife">
+            <a href="post-bars.html" aria-label="Read: Best bars in Santa Monica" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=600&q=80&auto=format&fit=crop"
+                  alt="Rooftop bar at dusk with city lights and a warm glowing atmosphere"
+                  loading="lazy"
+                >
+                <span class="tag tag--nightlife">Nightlife</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">The Best Bars in Santa Monica Right Now</h3>
+              <p class="card__excerpt">From the craft cocktails at Elephante on Ocean Ave to the no-frills dive energy of Chez Jay — the definitive Westsider bar guide for 2025.</p>
+              <div class="card__meta">
+                <span class="read-time">5 min read</span>
+                <a href="post-bars.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11 — Din Tai Fung / Dining -->
+          <article class="card reveal" data-category="dining">
+            <a href="post-din-tai-fung.html" aria-label="Read: Din Tai Fung Santa Monica review" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80&auto=format&fit=crop"
+                  alt="Delicate steamed soup dumplings xiaolongbao arranged in a bamboo steamer"
+                  loading="lazy"
+                >
+                <span class="tag tag--dining">Dining</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">Din Tai Fung Opens at Santa Monica Place — With Ocean Views</h3>
+              <p class="card__excerpt">The iconic Taiwan-born XLB empire finally has a Santa Monica outpost, and it comes with a patio overlooking the ocean. Worth the wait and the (inevitable) line.</p>
+              <div class="card__meta">
+                <span class="read-time">4 min read</span>
+                <a href="post-din-tai-fung.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12 — Beaches -->
+          <article class="card reveal" data-category="beaches">
+            <a href="post-santa-monica-beach.html" aria-label="Read: Best beaches in Santa Monica area" tabindex="-1">
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1736804962370-637d516caedf?w=600&q=80&auto=format&fit=crop"
+                  alt="Empty sandy beach with calm blue water and clear California skies"
+                  loading="lazy"
+                >
+                <span class="tag tag--beaches">Beaches</span>
+              </div>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title">The Locals&rsquo; Guide to Santa Monica Beach (Beyond the Pier)</h3>
+              <p class="card__excerpt">Where to park, which lifeguard zones are least crowded, the best volleyball nets, where to watch the Santa Monica sunset with zero tourists. All the things only residents know.</p>
+              <div class="card__meta">
+                <span class="read-time">6 min read</span>
+                <a href="post-santa-monica-beach.html" class="btn btn--text">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /grid -->
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="newsletter__inner container">
+        <span class="section__eyebrow reveal">Stay in the Loop</span>
+        <h2 class="section__heading reveal" id="newsletter-heading">
+          The Westside,<br>
+          <span class="gradient-text">in your inbox.</span>
+        </h2>
+        <p class="reveal">
+          Weekly picks for dining, outdoor adventures, and the best new spots in
+          Santa Monica, Brentwood, and Sawtelle &mdash; curated for people who actually live here.
+        </p>
+
+        <form class="newsletter__form reveal" id="newsletterForm" novalidate>
+          <input type="email" placeholder="your@email.com" aria-label="Email address" required>
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+
+        <div class="newsletter__success" id="newsletterSuccess" role="status" aria-live="polite">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#30d158" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          You&rsquo;re on the list. Welcome to the Westside.
+        </div>
+
+        <p class="newsletter__disclaimer reveal">No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
+        <p class="footer__tagline">Your insider guide to West Los Angeles.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="#posts">Dining</a>
+        <a href="#posts">Outdoors</a>
+        <a href="#posts">Nightlife</a>
+        <a href="#posts">Arts</a>
+        <a href="#posts">Beaches</a>
+        <a href="#posts">Hidden Gems</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Westsider. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

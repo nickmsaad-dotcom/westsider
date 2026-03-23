@@ -1,0 +1,135 @@
+/* ============================================================
+   POST PAGE — shared styles for all individual post pages
+   ============================================================ */
+
+.post__hero {
+  position: relative;
+  height: clamp(340px, 58vh, 620px);
+  overflow: hidden;
+}
+.post__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  transition: transform 10s ease;
+}
+.post__hero.loaded img { transform: scale(1); }
+.post__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 55%, transparent 100%);
+}
+
+.post__article {
+  padding-block: 3.5rem 6rem;
+  max-width: 740px;
+}
+.post__header { margin-bottom: 2.5rem; }
+.post__header .tag { margin-bottom: 1rem; }
+.post__title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+.post__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-3);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.post__body { font-size: 1.0625rem; line-height: 1.78; }
+.post__body p { margin-bottom: 1.5rem; color: var(--text); }
+.post__lead {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--text-2);
+  font-weight: 400;
+  line-height: 1.65;
+  margin-bottom: 2.25rem;
+}
+.post__body h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 3rem;
+  margin-bottom: 0.875rem;
+  color: var(--text);
+}
+.pull-quote {
+  border-left: 4px solid var(--accent-1);
+  padding: 1.25rem 1.5rem 1.25rem 1.75rem;
+  margin: 2.5rem 0;
+  background: var(--bg-secondary);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.55;
+}
+.post__tip {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+  color: var(--text);
+}
+.post__tip strong {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 0.5rem;
+}
+.post__img {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: 2.5rem 0;
+}
+.post__img img { width: 100%; max-height: 480px; object-fit: cover; }
+.post__img figcaption {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  text-align: center;
+  margin-top: 0.6rem;
+  font-style: italic;
+  padding: 0 1rem;
+}
+.post__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-1);
+  margin-bottom: 2rem;
+  transition: opacity 0.2s ease;
+}
+.post__back:hover { opacity: 0.7; }
+
+.related { background: var(--bg-secondary); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 768px) { .grid--3 { grid-template-columns: 1fr; } }
+
+.post__body h2 .num {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-1);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 480px) {
+  .post__title { font-size: 2rem; }
+  .post__article { padding-block: 2rem 4rem; }
+}
