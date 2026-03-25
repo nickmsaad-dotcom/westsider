@@ -136,6 +136,20 @@
       });
 
       elements.forEach(el => observer.observe(el));
+
+      // Safari fix: IntersectionObserver doesn't reliably fire for elements
+      // already in the viewport on page load — check them immediately
+      requestAnimationFrame(function() {
+        elements.forEach(function(el) {
+          if (el.classList.contains('visible')) return;
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.style.transitionDelay = '0ms';
+            el.classList.add('visible');
+            observer.unobserve(el);
+          }
+        });
+      });
     }
   };
 
@@ -375,24 +389,56 @@
   window.shareTwitter = function() {
     const url = encodeURIComponent(window.location.href);
     const text = encodeURIComponent(document.title);
-    window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank', 'noopener,noreferrer');
+    // Open synchronously inside the click handler so Safari doesn't block the popup
+    var win = window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+    if (win) win.opener = null;
   };
 
   window.copyLink = function() {
-    navigator.clipboard.writeText(window.location.href).then(function() {
-      const btn = document.querySelector('[onclick="copyLink()"]');
+    var href = window.location.href;
+    var btn = document.querySelector('[onclick="copyLink()"]');
+
+    function onSuccess() {
       if (btn) {
         btn.textContent = 'Copied!';
         setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
       }
-    }).catch(function() {
-      const btn = document.querySelector('[onclick="copyLink()"]');
+    }
+    function onFail() {
       if (btn) {
         btn.textContent = 'Copy failed';
         setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
       }
-    });
+    }
+
+    // Modern API (Chrome, Firefox, Safari 13.1+ on HTTPS)
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(href).then(onSuccess).catch(function() {
+        fallbackCopy(href, onSuccess, onFail);
+      });
+    } else {
+      fallbackCopy(href, onSuccess, onFail);
+    }
   };
+
+  function fallbackCopy(text, onSuccess, onFail) {
+    // execCommand fallback — works in Safari on HTTP and older browsers
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      ok ? onSuccess() : onFail();
+    } catch (e) {
+      document.body.removeChild(ta);
+      onFail();
+    }
+  }
 
   /* ──────────────────────────────────────────
      Boot
