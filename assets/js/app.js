@@ -131,19 +131,19 @@
           }
         });
       }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0,
+        rootMargin: '0px 0px 80px 0px'
       });
 
       elements.forEach(el => observer.observe(el));
 
       // Safari fix: IntersectionObserver doesn't reliably fire for elements
-      // already in the viewport on page load — check them immediately
+      // already in or just below the viewport on page load — check immediately
       requestAnimationFrame(function() {
         elements.forEach(function(el) {
           if (el.classList.contains('visible')) return;
           const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
+          if (rect.top < window.innerHeight + 80) {
             el.style.transitionDelay = '0ms';
             el.classList.add('visible');
             observer.unobserve(el);

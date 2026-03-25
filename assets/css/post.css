@@ -2,6 +2,15 @@
    POST PAGE — shared styles for all individual post pages
    ============================================================ */
 
+/* Primary post content should always be visible immediately —
+   never hidden by the scroll-reveal animation */
+.post__header,
+.post__body {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 .post__hero {
   position: relative;
   height: clamp(340px, 58vh, 620px);
