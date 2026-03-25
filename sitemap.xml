@@ -1,87 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://westsider.org/</loc>
+    <loc>https://westsider.org/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post.html</loc>
+    <loc>https://westsider.org/post-santa-monica-beach.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-santa-monica-beach.html</loc>
+    <loc>https://westsider.org/post-bars.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-bars.html</loc>
+    <loc>https://westsider.org/post-brentwood-mart.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-brentwood-mart.html</loc>
+    <loc>https://westsider.org/post-farmers-market.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-farmers-market.html</loc>
+    <loc>https://westsider.org/post-hammer-museum.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-hammer-museum.html</loc>
+    <loc>https://westsider.org/post-ballona-creek.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-ballona-creek.html</loc>
+    <loc>https://westsider.org/post-seline.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-seline.html</loc>
+    <loc>https://westsider.org/post-cosetta.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-cosetta.html</loc>
+    <loc>https://westsider.org/post-palisades-park.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-palisades-park.html</loc>
+    <loc>https://westsider.org/post-tongva-park.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-tongva-park.html</loc>
+    <loc>https://westsider.org/post-din-tai-fung.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-din-tai-fung.html</loc>
+    <loc>https://westsider.org/post-sbar.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-sbar.html</loc>
+    <loc>https://westsider.org/post-matu-kai.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-matu-kai.html</loc>
+    <loc>https://westsider.org/post-perse.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://westsider.org/post-perse.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>http://westsider.org/post-heroes-golf.html</loc>
+    <loc>https://westsider.org/post-heroes-golf.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
