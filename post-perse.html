@@ -12,17 +12,18 @@
   <link rel="stylesheet" href="assets/css/post.css">
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
   <header class="nav" id="nav" role="banner">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
-      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
       <div class="nav__actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <button class="nav__hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
-      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
     </div>
   </header>
   <main>
@@ -35,7 +36,7 @@
       <header class="post__header reveal">
         <span class="tag tag--dining">Dining</span>
         <h1 class="post__title" id="post-title">Perse: A Modern Persian Dining Experience in Brentwood</h1>
-        <div class="post__meta"><span>By Westsider Staff</span><span>February 2026</span><span>5 min read</span></div>
+        <div class="post__meta"><span>By Westsider Staff</span><span>February 2026</span><span class="post__read-time">5 min read</span></div>
       </header>
       <div class="post__body reveal">
         <p class="post__lead">The name comes from the French word for Persia. The room looks like a five-star hotel dining room. The food is Persian — koobideh, ghormeh sabzi, saffron lamb chops — elevated with white-tablecloth presentation and a wine list that includes Château Lafite Rothschild. Perse, which opened in early 2025 on San Vicente in Brentwood, is the most ambitious Persian restaurant to open on the Westside in years, and one of the best new restaurants in West LA full stop.</p>
@@ -51,6 +52,9 @@
         <p>The bar program takes Persian ingredients and memory as its starting point, producing cocktails that feel connected to the menu rather than decorative. The wine list spans California Chardonnays to serious Bordeaux — the glass wine cellar isn't just aesthetic. For a neighborhood restaurant in Brentwood, the level of ambition here is genuinely unusual.</p>
         <h2>Why It Matters</h2>
         <p>West LA has a large Persian community, and Persian cuisine has long been underrepresented at the fine dining level relative to its depth and complexity. Perse changes that. It's a restaurant that treats the food with the seriousness it deserves, in a room that matches the ambition of the kitchen. The result is one of the more important restaurant openings on the Westside in recent years.</p>
+      <div class="post__share">
+        <button class="share-btn" onclick="shareTwitter()">Share on X</button>
+        <button class="share-btn" onclick="copyLink()">Copy Link</button>
       </div>
     </article>
     <section class="section related" aria-labelledby="related-heading">
@@ -68,5 +72,6 @@
   <footer class="footer" role="contentinfo"><div class="container footer__inner"><div class="footer__brand"><a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a><p class="footer__tagline">Your insider guide to West Los Angeles.</p></div><nav class="footer__links"><a href="index.html#posts">Dining</a><a href="index.html#posts">Outdoors</a><a href="index.html#posts">Nightlife</a><a href="index.html#posts">Arts</a><a href="index.html#posts">Beaches</a><a href="index.html#posts">Hidden Gems</a></nav><p class="footer__copy">&copy; 2026 Westsider. All rights reserved.</p></div></footer>
   <script src="assets/js/app.js"></script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('postHero');if(h)setTimeout(()=>h.classList.add('loaded'),100);});</script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
 </body>
 </html>

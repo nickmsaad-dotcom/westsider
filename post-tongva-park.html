@@ -12,17 +12,18 @@
   <link rel="stylesheet" href="assets/css/post.css">
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
   <header class="nav" id="nav" role="banner">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
-      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
       <div class="nav__actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <button class="nav__hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
-      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
     </div>
   </header>
   <main>
@@ -35,7 +36,7 @@
       <header class="post__header reveal">
         <span class="tag tag--outdoors">Outdoors</span>
         <h1 class="post__title" id="post-title">Tongva Park: Santa Monica&rsquo;s Most Underrated Six Acres</h1>
-        <div class="post__meta"><span>By Westsider Staff</span><span>March 2026</span><span>4 min read</span></div>
+        <div class="post__meta"><span>By Westsider Staff</span><span>March 2026</span><span class="post__read-time">4 min read</span></div>
       </header>
       <div class="post__body reveal">
         <p class="post__lead">One block from the Santa Monica Pier, tucked between Ocean Avenue and Main Street, Tongva Park opened in 2013 on a former surface parking lot and immediately became one of the best public spaces on the Westside. Six acres of landscaped hills, interactive fountains, free amphitheater concerts, and sweeping views of the Pacific — all completely free, every day from 6am to 11pm.</p>
@@ -52,6 +53,9 @@
         <p>At the eastern edge of the park near Main Street sits the <em>Weather Field</em> — a public art installation of kinetic elements that respond to wind and light. It's subtle enough that many visitors walk past it, but worth stopping for. On a breezy afternoon the whole installation moves together in a way that's oddly calming.</p>
         <h2>Getting There</h2>
         <p>Tongva Park is at 1615 Ocean Avenue, Santa Monica (at Olympic Drive). The Metro E Line Downtown Santa Monica station is a 5-minute walk east on Colorado. Bike parking is available at multiple entry points. The park is open daily 6am–11pm, free always.</p>
+      <div class="post__share">
+        <button class="share-btn" onclick="shareTwitter()">Share on X</button>
+        <button class="share-btn" onclick="copyLink()">Copy Link</button>
       </div>
     </article>
     <section class="section related" aria-labelledby="related-heading">
@@ -69,5 +73,6 @@
   <footer class="footer" role="contentinfo"><div class="container footer__inner"><div class="footer__brand"><a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a><p class="footer__tagline">Your insider guide to West Los Angeles.</p></div><nav class="footer__links"><a href="index.html#posts">Dining</a><a href="index.html#posts">Outdoors</a><a href="index.html#posts">Nightlife</a><a href="index.html#posts">Arts</a><a href="index.html#posts">Beaches</a><a href="index.html#posts">Hidden Gems</a></nav><p class="footer__copy">&copy; 2026 Westsider. All rights reserved.</p></div></footer>
   <script src="assets/js/app.js"></script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('postHero');if(h)setTimeout(()=>h.classList.add('loaded'),100);});</script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
 </body>
 </html>

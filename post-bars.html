@@ -12,17 +12,18 @@
   <link rel="stylesheet" href="assets/css/post.css">
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
   <header class="nav" id="nav" role="banner">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
-      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
       <div class="nav__actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <button class="nav__hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
-      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
     </div>
   </header>
   <main>
@@ -35,7 +36,7 @@
       <header class="post__header reveal">
         <span class="tag tag--nightlife">Nightlife</span>
         <h1 class="post__title" id="post-title">The Best Bars in Santa Monica Right Now</h1>
-        <div class="post__meta"><span>By Westsider Staff</span><span>March 2026</span><span>5 min read</span></div>
+        <div class="post__meta"><span>By Westsider Staff</span><span>March 2026</span><span class="post__read-time">5 min read</span></div>
       </header>
       <div class="post__body reveal">
         <p class="post__lead">Santa Monica has always had a complicated relationship with nightlife. It goes to bed earlier than it should, the parking is difficult on weekend evenings, and for years the bar scene was either tourist-trap adjacent or forgettable. That has changed. The stretch of bars worth visiting now spans from Ocean Avenue to Main Street and covers everything from serious cocktail programs to legendary dives that have outlasted every trend around them.</p>
@@ -53,6 +54,9 @@
         <div class="post__tip"><strong>Parking Note</strong>Parking on Ocean Avenue near Chez Jay and Elephante is metered and limited on weekend evenings. The Santa Monica Pier Lot 1 structure on Colorado is the most reliable option — it's a 5-minute walk to Ocean Ave. The 3rd Street Promenade area also has several structures within 10 minutes walking of Main Street bars.</div>
         <h2>The Other Venice Option</h2>
         <p>If you're willing to extend the evening, the bars on Abbot Kinney in Venice — three miles south on Lincoln — run later and with more energy. The Roosterfish (a longstanding gay bar) and several wine-forward spots make the short trip worthwhile if you want the evening to keep going after Santa Monica closes up.</p>
+      <div class="post__share">
+        <button class="share-btn" onclick="shareTwitter()">Share on X</button>
+        <button class="share-btn" onclick="copyLink()">Copy Link</button>
       </div>
     </article>
     <section class="section related" aria-labelledby="related-heading">
@@ -70,5 +74,6 @@
   <footer class="footer" role="contentinfo"><div class="container footer__inner"><div class="footer__brand"><a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a><p class="footer__tagline">Your insider guide to West Los Angeles.</p></div><nav class="footer__links"><a href="index.html#posts">Dining</a><a href="index.html#posts">Outdoors</a><a href="index.html#posts">Nightlife</a><a href="index.html#posts">Arts</a><a href="index.html#posts">Beaches</a><a href="index.html#posts">Hidden Gems</a></nav><p class="footer__copy">&copy; 2026 Westsider. All rights reserved.</p></div></footer>
   <script src="assets/js/app.js"></script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('postHero');if(h)setTimeout(()=>h.classList.add('loaded'),100);});</script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
 </body>
 </html>

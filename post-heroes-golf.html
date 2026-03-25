@@ -12,17 +12,18 @@
   <link rel="stylesheet" href="assets/css/post.css">
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
   <header class="nav" id="nav" role="banner">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
-      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
       <div class="nav__actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <button class="nav__hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
-      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
     </div>
   </header>
   <main>
@@ -35,7 +36,7 @@
       <header class="post__header reveal">
         <span class="tag tag--hidden-gems">Hidden Gems</span>
         <h1 class="post__title" id="post-title">Heroes Golf Course: West LA&rsquo;s Best Kept Golf Secret</h1>
-        <div class="post__meta"><span>By Westsider Staff</span><span>February 2026</span><span>4 min read</span></div>
+        <div class="post__meta"><span>By Westsider Staff</span><span>February 2026</span><span class="post__read-time">4 min read</span></div>
       </header>
       <div class="post__body reveal">
         <p class="post__lead">On the sprawling Veterans Affairs campus off Wilshire Boulevard in West Los Angeles — tucked near the Japanese garden on the property, not far from where the UCLA baseball stadium sits on the other side of Wilshire — there is a 9-hole par-3 golf course that has been open since 1946. It costs $12 on a weekday. Veterans play free. Most people who live within two miles of it have no idea it exists.</p>
@@ -51,6 +52,9 @@
         <p>PGA Professional Jim Dennerline runs individual lessons, group clinics, and summer camps at Heroes through the co-located LA Golf Academy. If you're a beginner looking for a place to learn the game properly, this is one of the best setups in West LA — affordable green fees, a short course that doesn't punish mistakes, and on-site instruction from a PGA pro.</p>
         <h2>Getting There</h2>
         <p>The VA campus entrance is on Wilshire Boulevard. GPS to 11301 Wilshire Blvd, West LA. Parking on the VA campus is free. The course is a short walk from the main gate, near the Japanese garden. The UCLA athletic complex — including Jackie Robinson Stadium — is across Wilshire to the south.</p>
+      <div class="post__share">
+        <button class="share-btn" onclick="shareTwitter()">Share on X</button>
+        <button class="share-btn" onclick="copyLink()">Copy Link</button>
       </div>
     </article>
     <section class="section related" aria-labelledby="related-heading">
@@ -68,5 +72,6 @@
   <footer class="footer" role="contentinfo"><div class="container footer__inner"><div class="footer__brand"><a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a><p class="footer__tagline">Your insider guide to West Los Angeles.</p></div><nav class="footer__links"><a href="index.html#posts">Dining</a><a href="index.html#posts">Outdoors</a><a href="index.html#posts">Nightlife</a><a href="index.html#posts">Arts</a><a href="index.html#posts">Beaches</a><a href="index.html#posts">Hidden Gems</a></nav><p class="footer__copy">&copy; 2026 Westsider. All rights reserved.</p></div></footer>
   <script src="assets/js/app.js"></script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('postHero');if(h)setTimeout(()=>h.classList.add('loaded'),100);});</script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
 </body>
 </html>

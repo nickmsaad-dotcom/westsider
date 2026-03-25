@@ -12,17 +12,18 @@
   <link rel="stylesheet" href="assets/css/post.css">
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
   <header class="nav" id="nav" role="banner">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
-      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
       <div class="nav__actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <button class="nav__hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
-      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
     </div>
   </header>
   <main>
@@ -35,7 +36,7 @@
       <header class="post__header reveal">
         <span class="tag tag--nightlife">Nightlife</span>
         <h1 class="post__title" id="post-title">S Bar by Katsuya: Brentwood&rsquo;s Best Kept Nightlife Secret</h1>
-        <div class="post__meta"><span>By Westsider Staff</span><span>February 2026</span><span>5 min read</span></div>
+        <div class="post__meta"><span>By Westsider Staff</span><span>February 2026</span><span class="post__read-time">5 min read</span></div>
       </header>
       <div class="post__body reveal">
         <p class="post__lead">Tucked inside the original Katsuya on San Vicente Boulevard in Brentwood, S Bar operates as its own thing entirely — a sultry, high-energy lounge with craft cocktails, a kitchen pulling from one of LA's best Japanese menus, and a bar staff that makes you feel like a regular from the moment you walk in. Most people drive past it on the way to somewhere else. That's their loss.</p>
@@ -52,6 +53,9 @@
         <p>S Bar skews upscale without being stiff. The crowd is mixed — industry people, Brentwood locals, people who just finished dinner at Katsuya and didn't want the night to end. The music gets louder as the night progresses. The outdoor patio is the right call on a clear Westside evening, which in Brentwood is most evenings.</p>
         <h2>Getting There</h2>
         <p>S Bar is at 11777 San Vicente Blvd, Brentwood — inside Katsuya. Street parking on San Vicente or in the Brentwood Gardens structure nearby. Open Wednesday and Sunday until midnight, Thursday through Saturday until 1am. Closed Monday and Tuesday.</p>
+      <div class="post__share">
+        <button class="share-btn" onclick="shareTwitter()">Share on X</button>
+        <button class="share-btn" onclick="copyLink()">Copy Link</button>
       </div>
     </article>
     <section class="section related" aria-labelledby="related-heading">
@@ -69,5 +73,6 @@
   <footer class="footer" role="contentinfo"><div class="container footer__inner"><div class="footer__brand"><a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a><p class="footer__tagline">Your insider guide to West Los Angeles.</p></div><nav class="footer__links"><a href="index.html#posts">Dining</a><a href="index.html#posts">Outdoors</a><a href="index.html#posts">Nightlife</a><a href="index.html#posts">Arts</a><a href="index.html#posts">Beaches</a><a href="index.html#posts">Hidden Gems</a></nav><p class="footer__copy">&copy; 2026 Westsider. All rights reserved.</p></div></footer>
   <script src="assets/js/app.js"></script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('postHero');if(h)setTimeout(()=>h.classList.add('loaded'),100);});</script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
 </body>
 </html>

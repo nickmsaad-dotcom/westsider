@@ -12,17 +12,18 @@
   <link rel="stylesheet" href="assets/css/post.css">
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
   <header class="nav" id="nav" role="banner">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a>
-      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
       <div class="nav__actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <button class="nav__hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
-      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a><a href="post.html">Read</a></nav>
+      <nav class="nav__mobile-links"><a href="index.html#featured">Featured</a><a href="index.html#posts">Explore</a><a href="index.html#newsletter">Newsletter</a></nav>
     </div>
   </header>
   <main>
@@ -35,7 +36,7 @@
       <header class="post__header reveal">
         <span class="tag tag--outdoors">Outdoors</span>
         <h1 class="post__title" id="post-title">Ballona Creek Bike Path: West LA&rsquo;s Secret 7-Mile Escape</h1>
-        <div class="post__meta"><span>By Westsider Staff</span><span>March 2026</span><span>5 min read</span></div>
+        <div class="post__meta"><span>By Westsider Staff</span><span>March 2026</span><span class="post__read-time">5 min read</span></div>
       </header>
       <div class="post__body reveal">
         <p class="post__lead">Most people who live in West LA don't know there's a completely car-free, paved bike path running through their neighborhood from Culver City all the way to the beach. The Ballona Creek Bike Path follows the north bank of Ballona Creek for approximately 6.5 to 7 miles, passing through Culver City, West LA, past Sawtelle, and ending where the creek meets the Pacific Ocean at Marina del Rey.</p>
@@ -52,6 +53,9 @@
         <p>The western end of the path drops you at the Marina del Rey waterfront near Fisherman's Village, where you can lock up, get coffee, and watch boats move in and out of the channel. The Coastal Bike Path connects here heading south toward Venice, Playa del Rey, and El Segundo, or north toward Santa Monica. A full loop — Sawtelle to Marina, north on the Coastal Path to Santa Monica, back inland — is a satisfying 12–15 mile morning.</p>
         <h2>Getting Started</h2>
         <p>No parking, no fees, no permits needed. Any entry point on the list above works. A basic hybrid or road bike is ideal. The path is open during daylight hours. Lighting is minimal in some sections after dark, so plan accordingly.</p>
+      <div class="post__share">
+        <button class="share-btn" onclick="shareTwitter()">Share on X</button>
+        <button class="share-btn" onclick="copyLink()">Copy Link</button>
       </div>
     </article>
     <section class="section related" aria-labelledby="related-heading">
@@ -69,5 +73,6 @@
   <footer class="footer" role="contentinfo"><div class="container footer__inner"><div class="footer__brand"><a href="index.html" class="nav__logo" aria-label="Westsider home">West<span>sider</span></a><p class="footer__tagline">Your insider guide to West Los Angeles.</p></div><nav class="footer__links"><a href="index.html#posts">Dining</a><a href="index.html#posts">Outdoors</a><a href="index.html#posts">Nightlife</a><a href="index.html#posts">Arts</a><a href="index.html#posts">Beaches</a><a href="index.html#posts">Hidden Gems</a></nav><p class="footer__copy">&copy; 2026 Westsider. All rights reserved.</p></div></footer>
   <script src="assets/js/app.js"></script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const h=document.getElementById('postHero');if(h)setTimeout(()=>h.classList.add('loaded'),100);});</script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
 </body>
 </html>

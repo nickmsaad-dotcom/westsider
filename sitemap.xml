@@ -3,6 +3,7 @@
   <url>
     <loc>https://westsider.org/</loc>
     <lastmod>2026-03-24</lastmod>
+
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -92,6 +93,30 @@
   </url>
   <url>
     <loc>https://westsider.org/post-heroes-golf.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://westsider.org/post-holy-basil.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://westsider.org/post-force-of-nature.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://westsider.org/post-riley-chilis.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://westsider.org/post-sawtelle.html</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
