@@ -8,6 +8,19 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://westsider.org/post-west-la-spring-dining-hits.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://westsider.org/post-dodgers-opening-day.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://westsider.org/post-santa-monica-beach.html</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>

@@ -232,15 +232,25 @@
       this.form.addEventListener('submit', e => {
         e.preventDefault();
         const input = this.form.querySelector('input[type="email"]');
-        if (!input || !input.value.includes('@')) {
+        if (!input) return;
+        if (!input.value.includes('@')) {
           input.style.borderColor = '#ff3b30';
           input.focus();
           setTimeout(() => { input.style.borderColor = ''; }, 2000);
           return;
         }
-        // Show success
-        this.form.classList.add('hide');
-        if (this.success) this.success.classList.add('show');
+        const data = new FormData(this.form);
+        fetch(this.form.action, {
+          method: 'POST',
+          body: data,
+          mode: 'no-cors'
+        }).then(() => {
+          this.form.classList.add('hide');
+          if (this.success) this.success.classList.add('show');
+        }).catch(() => {
+          this.form.classList.add('hide');
+          if (this.success) this.success.classList.add('show');
+        });
       });
     }
   };
@@ -331,6 +341,9 @@
      "Most Popular" section on homepage
   ────────────────────────────────────────── */
   const POST_META = {
+    'post-west-la-spring-dining-hits': { title: 'The West LA Spring Dining Guide: 7 Tables We\'re Fighting Over Right Now', img: 'https://images.pexels.com/photos/10294329/pexels-photo-10294329.jpeg?auto=compress&cs=tinysrgb&w=600&q=80', alt: 'Inviting outdoor restaurant patio with chairs, tables, and string lights in Zanzibar, Tanzania.', tag: 'Dining', tagClass: 'tag--dining', href: 'post-west-la-spring-dining-hits.html' },
+
+    'post-dodgers-opening-day': { title: 'Opening Day: The Dodgers Are Back and the Padres Are Already Planning for Next Year', img: 'https://images.pexels.com/photos/17061702/pexels-photo-17061702.jpeg?auto=compress&cs=tinysrgb&w=600&q=80', alt: 'Baseball at Dodger Stadium on Opening Day', tag: 'Outdoors', tagClass: 'tag--outdoors', href: 'post-dodgers-opening-day.html' },
     'post-perse':            { title: 'Perse: A Modern Persian Dining Experience in Brentwood',     img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80&auto=format&fit=crop', alt: 'Elegantly plated Persian dishes',  tag: 'Dining',       tagClass: 'tag--dining',      href: 'post-perse.html' },
     'post-matu-kai':         { title: 'Matu Kai: Brentwood\'s New Wagyu Destination',               img: 'https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80&auto=format&fit=crop', alt: 'Wagyu steak',                     tag: 'Dining',       tagClass: 'tag--dining',      href: 'post-matu-kai.html' },
     'post-seline':           { title: 'SELINE: Santa Monica\'s New Michelin-Worthy Tasting Menu',   img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop', alt: 'Fine dining plate',               tag: 'Dining',       tagClass: 'tag--dining',      href: 'post-seline.html' },
